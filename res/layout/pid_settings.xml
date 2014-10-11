@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="42dip"
+        android:layout_marginBottom="42dip"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView09"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PID"
+                android:textColor="#ff00" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                >
+
+                <TableRow
+                    android:id="@+id/tableRow8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Profile" />
+                </TableRow>
+
+              <TableRow
+                    android:id="@+id/tableRow9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="loadOnClick"
+                        android:text="Load" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="saveProfileOnClick"
+                        android:layout_weight="1"
+                        android:text="Save" />
+                </TableRow>
+
+              <TableRow
+                  android:id="@+id/tableRow13"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" >
+
+                  <Button
+                      android:id="@+id/button2"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:onClick="resetOnClick"
+                      android:text="Reset" />
+
+                  <Button
+                      android:id="@+id/button1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:onClick="setOnClick"
+                      android:tag="DONTASK"
+                      android:layout_weight="1"
+                      android:text="SavetoEEPROM" />
+
+              </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape_2"
+                >
+
+                <TableRow
+                    android:id="@+id/tableRow12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ClickOnTheNameForInfo"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="P"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="I"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="D"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="RATE"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=PID#Basic_PID_Tuning"
+                        android:text="Roll"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/P1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextRatePitchRoll1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=PID#Basic_PID_Tuning"
+                        android:text="Pitch"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/P2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:background="@drawable/edit_text_shape_1"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/D2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:background="@drawable/edit_text_shape_1"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/editTextRatePitchRoll2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/edit_text_shape_1"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=PID#Basic_PID_Tuning"
+                        android:text="Yaw"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/P3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextRateYaw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="https://dl.dropboxusercontent.com/u/80566205/not%20remove/tutorials/PID%20Alt%20Hold.html"
+                        android:text="Alt"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/P4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Pos" />
+
+                    <EditText
+                        android:id="@+id/P5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        
+                        android:background="@drawable/edit_text_shape_1"/>
+
+                    <EditText
+                        android:id="@+id/D5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="PosR" 
+                        />
+
+                    <EditText
+                        android:id="@+id/P6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="visible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="NavR" 
+                        />
+
+                    <EditText
+                        android:id="@+id/P7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=PID#PID_:_Level"
+                        android:text="Level"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/P8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/I8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/TableRow01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    >
+
+                    <TextView
+                        android:id="@+id/PIDName8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mag"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/P9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/I9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/D9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:visibility="invisible" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_shape_2"
+                >
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=RC_rates_%26_expo"
+                        android:text="ThrMid"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextMIDThrottle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=RC_rates_%26_expo"
+                        android:text="ThrExpo"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextEXPOThrottle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=RC_rates_%26_expo"
+                        android:text="RCRate"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextRate2PitchRoll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/wiki/index.php?title=RC_rates_%26_expo"
+                        android:text="RCExpo"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextEXPOPitchRoll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dip"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="OpenInfoOnClick"
+                        android:tag="http://www.multiwii.com/forum/viewtopic.php?f=18&amp;t=3578&amp;p=36674&amp;hilit=attenuation#p36674"
+                        android:text="TPA"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextTPA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal" 
+                        android:background="@drawable/edit_text_shape_1"
+                        />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

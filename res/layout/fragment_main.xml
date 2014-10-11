@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/mainRelativeLayout"
+    android:background="@drawable/main_background_1"
+    android:orientation="vertical"
+    tools:context="com.elf_vrdrone.view.MainActivity$PlaceholderFragment" >
+
+    <ImageView
+        android:id="@+id/mainImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/nothing"
+        android:scaleType="fitXY"
+        />
+    
+    <ImageView
+        android:id="@+id/imageViewScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:clickable="true"
+        android:onClick="scan"
+        android:src="@drawable/ble_scan" />
+
+
+
+    <ImageView
+        android:id="@+id/imageViewLock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="lock"
+        android:src="@drawable/btn_lock_image" />
+
+    <ImageView
+        android:id="@+id/imageViewJoyBackgroundLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewScan"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="36dp"
+        android:src="@drawable/joy_backgound_left" />
+
+    <ImageView
+        android:id="@+id/mainImageViewScanCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="28dp"
+        android:onClick="scanCameraOnClick"
+        android:clickable="true"
+        android:src="@drawable/btn_camera_close" 
+        />
+
+    <ImageView
+        android:id="@+id/imageViewSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonSettings"
+        android:src="@drawable/btn_settings_image" />
+
+    <ImageView
+        android:id="@+id/imageViewJoyBackgroundRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/mainImageViewScanCamera"
+        android:layout_alignTop="@+id/imageViewJoyBackgroundLeft"
+        android:layout_marginRight="36dp"
+        android:src="@drawable/joy_backgound_right" />
+
+    <ImageView
+        android:id="@+id/imageViewDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewJoyBackgroundLeft"
+        android:layout_marginLeft="44dip"
+        android:layout_toRightOf="@+id/imageViewScan"
+        android:src="@drawable/joy_stick" />
+
+    <ImageView
+        android:id="@+id/imageViewAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewJoyBackgroundLeft"
+        android:layout_marginRight="35dip"
+        android:layout_toLeftOf="@+id/mainImageViewScanCamera"
+        android:src="@drawable/joy_stick" />
+
+    
+
+    <ImageView
+        android:id="@+id/imageViewHoldAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/switch_on" 
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="28dp"
+        android:clickable="true"
+        android:onClick="holdAltitudeModeOnClick"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/imageViewHoldAltitude"
+        android:layout_toLeftOf="@+id/imageViewHoldAltitude"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dip"
+        android:text="@string/hold_altitude_mode" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:id="@+id/mainLinearLayout"
+        android:alpha="0.8"
+        >
+
+        <FrameLayout
+            android:id="@+id/mainLeftFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="50dip"
+            android:layout_marginBottom="50dip"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:clickable="true" >
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dip"
+            android:layout_marginBottom="50dip"
+            android:orientation="vertical" 
+            android:layout_weight="0.1"
+            android:gravity="center"
+            >
+            
+            <ImageView
+		        android:id="@+id/mainImageViewCamera"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:clickable="true"
+		        android:src="@drawable/btn_play_image"
+		        android:onClick="imageViewCameraOnClick"
+		        />
+            
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/mainRightFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="50dip"
+            android:layout_marginBottom="50dip"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:clickable="true" >
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mainFramLayoutProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.7"
+        android:background="#111111"
+        android:clickable="true"
+        android:visibility="invisible" >
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dip"
+        android:visibility="invisible"
+        android:text="test" />
+
+</RelativeLayout>

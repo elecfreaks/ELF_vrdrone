@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ELF-vrdrone</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="left_hand_mode">左手模式</string>
+    <string name="beginner_mode">新手模式</string>
+    <string name="free_head_mode">无头模式</string>
+    <string name="hold_altitude_mode">定高模式</string>
+    <string name="acc_calibrate">校准加速度</string>
+    <string name="mag_calibrate"> 校准罗盘 </string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="logining">请登录</string>
+    <string name="online">在线</string>
+    <string name="search">搜索</string>
+    <string name="breakup">断开</string>
+    <string name="reset">复位</string>
+    <string name="offline">设备离线</string>
+    <string name="video_not_start">视频未开启</string>
+    <string name="record_open_failed">录像开启失败</string>
+    <string name="record_close_failed">录像关闭失败</string>
+    <string name="record_is_opened">录像已开启</string>
+    <string name="record_is_closed">录像已关闭</string>
+    <string name="sdcard_not_exist">内存卡不存在</string>
+    <string name="please_connect_camera">请连接摄像头</string>
+    <string name="please_connect_bluetooth">请连接蓝牙设备</string>
+ 
+</resources>

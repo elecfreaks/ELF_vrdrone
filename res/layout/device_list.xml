@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="EelecFreaks"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fffb00" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7dp" 
+        android:background="@drawable/btn_background"
+        >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+    </ListView>
+
+</LinearLayout>

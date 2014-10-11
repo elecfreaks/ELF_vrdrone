@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ELF-vrdrone</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="left_hand_mode">LeftHandMode</string>
+    <string name="beginner_mode">BeginnerMode</string>
+    <string name="free_head_mode">FreeHeadMode</string>
+    <string name="hold_altitude_mode">HoldAltitudeMode</string>
+    <string name="acc_calibrate">AccCalibrate</string>
+    <string name="mag_calibrate">MagCalibrate</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="logining">please login</string>
+    <string name="online">online</string>
+    <string name="search">search</string>
+    <string name="breakup">break</string>
+    <string name="reset">reset</string>
+    <string name="offline">offline</string>
+    <string name="video_not_start">Video not start</string>
+    <string name="record_open_failed">Record open failed</string>
+    <string name="record_close_failed">Record close failed</string>
+    <string name="record_is_opened">Record is opened</string>
+    <string name="record_is_closed">Record is closed</string>
+    <string name="sdcard_not_exist">Sdcard is not exist</string>
+    <string name="please_connect_camera">Please connect to your camera</string>
+    <string name="please_connect_bluetooth">Please connect to your bluetooth device</string>
+
+</resources>

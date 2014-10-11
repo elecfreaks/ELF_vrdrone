@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- android:gravity="center_horizontal" -->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/btn_back_image"
+        android:onClick="backOnClick"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imageViewScanCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="46dp"
+        android:src="@drawable/btn_camera_close"
+        android:onClick="scanCameraOnClick"
+        android:clickable="true" 
+        />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="320dip"
+        android:layout_height="240dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/imageViewLeftFrame"
+            android:layout_width="320dip"
+            android:layout_height="240dip"
+            android:clickable="true"
+            android:onClick="imageViewFrameOnClick"
+            android:src="@drawable/nothing" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftGraduation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:alpha="0.5"
+            android:scaleType="matrix"
+            android:scrollY="21dip"
+            android:src="@drawable/graduation" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftCursor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:alpha="0.5"
+            android:src="@drawable/cursor" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="320dip"
+        android:layout_height="240dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/imageViewRightFrame"
+            android:layout_width="320dip"
+            android:layout_height="240dip"
+            android:clickable="true"
+            android:onClick="imageViewFrameOnClick"
+            android:src="@drawable/nothing" />
+
+        <ImageView
+            android:id="@+id/imageViewRightGraduation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:alpha="0.5"
+            android:scaleType="matrix"
+            android:scrollY="21dip"
+            android:src="@drawable/graduation" />
+
+        <ImageView
+            android:id="@+id/imageViewRightCursor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:alpha="0.5"
+            android:src="@drawable/cursor" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewCamStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout1"
+        android:layout_centerHorizontal="true"
+        android:text="---" />
+
+
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawerMenus"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:allowSingleTap="false"
+        android:orientation="horizontal"
+        >
+		<ImageView 
+		    android:id="@+id/handle"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:visibility="invisible"
+            android:src="@drawable/nothing"
+		    />
+        
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center|left"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera_close" 
+                android:clickable="true"
+                android:onClick="imageViewCameraOnClick"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/audio_close" 
+                android:clickable="true"
+                android:onClick="needAudioOnClick"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="1dip"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewSnapshot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="catchPictureOnClick"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="8dip"
+                android:src="@drawable/btn_snapshot_image" />
+
+            <ImageView
+                android:id="@+id/imageViewLiveRec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="liveRecOnClick"
+                android:src="@drawable/live_rec" />
+
+        </LinearLayout>
+        
+    </SlidingDrawer>
+
+    <FrameLayout
+        android:id="@+id/framLayoutProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#111111"
+        android:alpha="0.6"
+        android:clickable="true"
+        android:visibility="invisible"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+</RelativeLayout>
